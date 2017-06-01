@@ -1,0 +1,44 @@
+<ion-view view-title="Inicio">
+  <ion-content class="padding">
+    <h4 class="txtcentrado">Mis reservaciones</h4>
+    <!--        <div class="list card">
+            <label class="item item-input item-select item-icon-left">
+              <i class="icon ion-location"></i>
+                  <div class="input-label label-mod">
+                    Estado:
+                  </div>
+                  <select ng-model="estadoSel" ng-options="estado.nombre for estado in estados" ng-change="haceVisible(estadoSel)">
+                  </select>
+            </label>
+        </div>-->
+    <!--        <div class="list card" ng-show="true">
+            <div class="item " item-height="500" ng-repeat="item in hospitales" >
+                <ion-radio class="item-thumbnail-left" ng-model="choice" ng-value="'A'">
+                    <img src="{{item.imagen}}"> {{item.nombre}}
+                </ion-radio>
+            </div>
+            <div class="item">
+                <button ng-click="siguiente()" class="btn btn-block bg-blue waves-effect">Siguiente</button>
+            </div>
+        </div>-->
+    <div class="list card" ng-show="true">
+      <div class="item item-avatar" ng-repeat="item in reservaciones">
+        <img src="{{item.logo}}">
+        <div>
+          <div class="left">
+            <p style="font-weight:bold">{{item.hospital}}</p>
+            {{item.cirugia}}
+          </div>
+           <div class="right">
+            <p>{{item.fecha | date:'dd/MM/yyyy'}}</p>
+                {{item.fecha | date:'HH:mm a'}}
+          </div>
+        </div>
+
+        
+        <!--<div><span style="float:right; text-align:right">{{item.fecha | date:'dd/MM/yyyy'}}</span><h2 style="font-weight: bold; font-size:80%">{{item.hospital}}</h2></div>
+        <div><span style="float:right; text-align:rigt">{{item.fecha | date:'HH:mm a'}}</span><h2 >{{item.cirugia}}</h2></div>-->
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

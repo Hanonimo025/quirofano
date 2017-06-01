@@ -1,0 +1,76 @@
+<ion-view view-title="Crear Reservación">
+  <ion-content class="padding">
+    <h4 class="txtcentrado">Reservación</h4>
+    <div class="list card">
+      <div class="item item-icon-left item-select">
+        <i class="icon ion-location"></i>
+        <h2>Estado:</h2>
+        <div>
+<!--          <select ng-model="reservacion.estado" ng-options="value.nombre for value in estados">
+                            <option selected>Nuevo León</option>
+                        </select>-->
+                           <select ng-model="reservacion.estado">
+                            <option selected>Nuevo León</option>
+                        </select>
+        </div>
+      </div>
+      <div class="item item-icon-left item-select">
+        <i class="icon ion-location"></i>
+        <h2>Hospital:</h2>
+        <div>
+          <select ng-model="reservacion.hospital" ng-options="value.rs for value in hospitales">
+                            <option selected>--</option>
+                        </select>
+        </div>
+      </div>
+      <div class="item item-divider">
+        Selecciona el día y la hora:
+      </div>
+      <div class="item item-icon-left" ion-datetime-picker dateTime ng-model="reservacion.fecha">
+        <i class="icon ion-calendar"></i> {{reservacion.fecha| date: "EEEE dd-MM-yyyy HH:mm:ss"}}
+      </div>
+      <div class="item item-divider">
+        Tiempo estimado de la cirugia:
+      </div>
+      <label class="item item-input item-select item-icon-left">
+                 <i class="icon ion-clock"></i>
+                    <div class="input-label label-mod">
+                    Horas
+                    </div>
+                       <select ng-model="reservacion.horas" ng-options="value.descripcion for value in horas">
+                            <option selected>--</option>
+                        </select>
+            </label>
+      <label class="item item-input item-select item-icon-left">
+                 <i class="icon ion-medkit"></i>
+                    <div class="input-label label-mod">
+                    Cirugía:
+                    </div>
+                       <select ng-model="reservacion.cirugia" ng-options="value.des for value in cirugias">
+                            <option selected>--</option>
+                        </select>
+            </label>
+      <div class="item item-icon-left">
+        <i class="icon ion-person"></i>
+        <input ng-model="reservacion.nombrePaciente" type="text" placeholder="Nombre del Paciente">
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon icon-ios-folder-open"></i>
+        <input ng-model="reservacion.diagnostico" type="text" placeholder="Diagnostico del paciente">
+      </div>
+      <ion-checkbox ng-model="reservacion.anestesiologo">Requiere Anestesiólogo</ion-checkbox>
+      <div class="item item-divider item-icon-left">
+        <i class="icon ios-add"></i> Requiere algun instrumento
+        <br> ó equipo medico especial?
+      </div>
+      <div class="item">
+        <input ng-model="reservacion.instrumentos" type="text" placeholder="Diagnostico del paciente">
+      </div>
+      <div class="item">
+        <a href="#/menu/home" class="button button-assertive">Cancelar</a>
+        <a class="button button-positive" ng-click="EnviaReservacion(reservacion)">Enviar</a>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

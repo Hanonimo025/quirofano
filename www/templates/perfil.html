@@ -1,0 +1,29 @@
+<ion-view view-title="Perfil">
+  <ion-content class="padding">
+    <h4 class="txtcentrado">Mi Perfil</h4>
+    <div class="list card" ng-show="true">
+      <div class="item images-parent">
+        <img src="{{usuario.foto}}" class="center-image"></img>
+      </div>
+      <div class=" item item-icon-left">
+           <i class="icon ion-person"></i>
+           <h2>{{usuario.nombres}} {{usuario.apellidos}}</h2>
+      </div>
+       <div class=" item item-icon-left">
+           <i class="icon ion-medkit"></i>
+           <h2>{{usuario.especialidad}}</h2>
+      </div>
+        <div class=" item item-icon-left">
+           <i class="icon ion-medkit"></i>
+           <h2>Hospitaria</h2>
+      </div>
+        <div class=" item item-icon-left">
+           <i class="icon ion-location"></i>
+           <p>Granados 146 Col.Lomas de San Genaro</p>
+      </div>
+       <div class="item">
+       <button ng-click="entrar()" class="btn btn-block bg-pink waves-effect">EDITAR</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

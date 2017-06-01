@@ -1,0 +1,12 @@
+<ion-view view-title="Pagos">
+  <ion-content class="padding">
+    <h4 class="txtcentrado">Mis Pagos</h4>
+    <div class="list card" ng-show="true">
+      <div class="item " item-height="400" ng-repeat="item in pagos">
+        <div><span style="float:right">{{item.fecha}}</span><h2 style="font-weight: bold">{{item.numero}}</h2></div>
+        <br>
+        <div><span style="float:right">{{item.cantidad}}</span><h2>{{item.nombre}}</h2></div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

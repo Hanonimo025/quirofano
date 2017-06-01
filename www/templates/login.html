@@ -1,0 +1,21 @@
+<ion-view view-title="Login" name="login-view" hide-nav-bar="true">
+    <ion-content class="padding login-page">
+         <div class="logo">
+            <h1>Steeches</h1>
+            <small>Reservaciones de Consultorios</small>
+        </div>
+        <div class="list card">
+            <div class="item item-icon-left">
+                <i class="icon ion-person"></i>
+                <input ng-model="vm.usuario" type="text" placeholder="Usuario">
+            </div>
+             <div class="item item-icon-left">
+                <i class="icon ion-locked"></i>
+                <input ng-model="vm.password" type="text" placeholder="Contraseña">
+            </div>
+             <div class="item">
+                <button ng-click="entrar(vm)" class="btn btn-block bg-pink waves-effect">ENTRAR</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

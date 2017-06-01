@@ -1,0 +1,13 @@
+<ion-view view-title="Historial">
+  <ion-content class="padding">
+    <h4 class="txtcentrado">Mis reservaciones</h4>
+    <div class="list card" ng-show="true">
+      <div class="item item-thumbnail-left " item-height="400" ng-repeat="item in reservaciones">
+        <img src="{{item.imagen}}">
+        <div><span style="float:right">11/11/2016</span><h2 style="font-weight: bold">{{item.nombre}}</h2></div>
+        <br>
+        <div><span style="float:right"></span><h2>TORAXICA</h2></div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
